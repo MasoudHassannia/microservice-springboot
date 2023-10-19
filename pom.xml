@@ -9,7 +9,8 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>customer</module>
-      <module>fraud</module>
+    <module>fraud</module>
+    <module>eureka-server</module>
   </modules>
 
 
@@ -17,7 +18,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <spring.boot.version>3.1.2</spring.boot.version>
+    <spring.boot.version>2.5.0</spring.boot.version>
+    <spring.cloud-version>2020.0.2</spring.cloud-version>
   </properties>
 
   <dependencyManagement>
@@ -29,6 +31,13 @@
         <scope>import</scope>
         <type>pom</type>
       </dependency>
+        <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-dependencies</artifactId>
+          <version>${spring.cloud-version}</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
     </dependencies>
   </dependencyManagement>
 
